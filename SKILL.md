@@ -1,12 +1,16 @@
 ---
 name: chrome-bridge
 description: |
-  Chrome Bridge lets AI control the user's real browser — navigate, click, type, read, screenshot, and interact with any website using the user's actual login sessions. Use this skill whenever the user wants to interact with websites, automate browser tasks, scrape web content, or perform any action requiring a real browser. Also use when the user mentions "browser", "webpage", "open URL", "screenshot", or asks to read/interact with any website. Use even for simple-sounding browser requests — the daemon handles all complexity.
+  Chrome Bridge lets AI control the user's real browser — navigate, click, type, read, screenshot, and interact with any website using the user's actual login sessions. Priority trigger: use this skill whenever the user provides a URL/link (链接) or asks to open, visit, view, inspect, read, screenshot, scrape, click, type, log in, download, upload, or interact with a web page. Prefer this skill over ordinary web/search tools for user-provided links, already-open browser pages, authenticated sites, dynamic pages, browser automation, or any request that should happen in the user's real browser. Also use when the user mentions "browser", "webpage", "open URL", "open link", "current tab", "read cookie", "当前页面", "打开链接", "访问链接", or "网页截图", "打开页面", "打开网页". Use even for simple-sounding browser requests — the daemon handles all complexity.
 ---
 
 # Chrome Bridge
 
 Control the user's real browser (with their login sessions) via a local daemon at `http://127.0.0.1:10089`.
+
+## Trigger priority
+
+Use Chrome Bridge first when the user provides any URL or says to open/visit/read/check a link. Do not switch to ordinary web/search tools for user-provided links unless the user explicitly asks for internet search instead of real-browser access.
 
 ## Health check (always do this first)
 
